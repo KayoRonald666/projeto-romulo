@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Balanceamento em Expressões</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <div id="main" class="min-h-screen flex items-center justify-center px-4">
+      <div
+        class="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 w-full max-w-4xl"
+      >
+        <h1
+          class="text-2xl sm:text-3xl font-extrabold leading-normal my-8 text-center text-gray-900"
+        >
+          Verificação de Balanceamento em Expressões
+        </h1>
+
+        <div class="mb-6">
+          <div class="mb-4">
+            <form
+              id="verificarForm"
+              class="flex items-center justify-center gap-1"
+            >
+              <input
+                class="w-full rounded-md py-2 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                type="text"
+                name="elemento"
+                id="expressao"
+                list="numeros"
+                required
+                placeholder="Adicionar um valor"
+              />
+              <datalist id="numeros">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="5"></option>
+              </datalist>
+              <input
+                type="submit"
+                value="Verificar"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              />
+            </form>
+          </div>
+        </div>
+
+        <p class="text-lg text-gray-700">Expressão</p>
+        <div
+          id="meuArray"
+          class="bg-gray-700 shadow-md rounded p-4 m-4 h-30 mx-2 flex justify-start flex-wrap overflow-auto text-white"
+        ></div>
+
+        <p class="text-lg text-gray-700">Resultado</p>
+        <div
+          id="meuResultado"
+          class="bg-gray-700 shadow-md rounded p-4 m-4 h-30 mx-2 flex justify-center flex-wrap overflow-auto text-white"
+        ></div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
